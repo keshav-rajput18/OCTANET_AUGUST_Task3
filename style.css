@@ -1,0 +1,396 @@
+/* Reset default margins and paddings */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a background color or image */
+  body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  /* Style the navigation bar */
+  nav {
+    background-color: #282828;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  nav ul li {
+    cursor: pointer;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  
+  .brand img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  /* Style the container */
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #212121;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the song list */
+  .songList h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .songItemContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .songItem {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .songItem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .songName {
+    display: block;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .songlistplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timestamp {
+    margin-right: 10px;
+  }
+  
+  .songItemPlay {
+    color: #1DB954;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Style the footer */
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #282828;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .icons i {
+    cursor: pointer;
+    color: #1DB954;
+    font-size: 1.8rem;
+  }
+  
+  /* Style the song info */
+  .songInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #gif {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+  /* Animation for song list on hover */
+.songList {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .songList:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Animation for song items on hover */
+  .songItemContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .songItemContainer:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Animation for footer on hover */
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .bottom:hover {
+    transform: translateY(10px);
+  }
+  /* Animation for navigation links */
+.navbar ul li {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar ul li::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #1DB954;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar ul li:hover {
+    color: #1DB954;
+  }
+  
+  .navbar ul li:hover::before {
+    transform: scaleX(1);
+  }
+  
+  /* Animation for song banner */
+  .songBanner {
+    background-image: url("banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 15px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Keyframes for fadeIn animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for progress bar */
+  #myProgressBar {
+    width: 100%;
+    background-color: #444;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  #myProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: #1DB954;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Animation for master play button */
+  #masterPlay:hover {
+    transform: scale(1.2);
+    animation: pulse 1s infinite;
+  }
+  
+  /* Keyframes for pulse animation */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+ /* Reset default margins and paddings */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color or image */
+body {
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* ... (rest of the previous CSS code) ... */
+
+/* Hover and zoom effect for song items */
+.songItem {
+  background-color: #282828;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.songItem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.songItem:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #0c1423;
+}
+
+/* Hover and zoom effect for master play button */
+#masterPlay:hover {
+  transform: scale(1.2);
+  animation: pulse 1s infinite;
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+}
+
+/* Hover effect for navigation links */
+.navbar ul li {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #1DB954;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar ul li:hover {
+  color: #1DB954;
+}
+
+.navbar ul li:hover::before {
+  transform: scaleX(1);
+}
+
+/* Hover effect for song list and song item container */
+.songList,
+.songItemContainer {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.songList:hover,
+.songItemContainer:hover {
+  transform: translateY(-10px);
+}
+
+/* Hover effect for footer */
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #282828;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.bottom:hover {
+  transform: translateY(10px);
+  background-color: #121212;
+}
